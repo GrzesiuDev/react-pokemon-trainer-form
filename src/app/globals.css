@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --color-primary: #9747ff;
+  --color-primary-dark: #7135bf;
+  --color-primary-light: #9747ff40;
+  --color-error: #ff4e4e;
+}
+
+@font-face {
+  font-family: 'IBM VGA 8x16';
+  src: url('/fonts/IBM_VGA.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'IBM VGA 8x16', monospace;
+}
+/* Custom focus ring utility */
+.focus-ring {
+  @apply focus:outline-none focus:ring-1 focus:ring-(--color-primary) focus:border-(--color-primary) focus:shadow-[0_0_0_4px_rgba(151,71,255,0.2)];
+}
