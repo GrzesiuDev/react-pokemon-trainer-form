@@ -79,7 +79,7 @@ export const PokemonAutocomplete: React.FC<PokemonAutocompleteProps> = ({
             'focus-ring',
             'transition-colors',
           )}
-          placeholder="Start typing or click to browse..."
+          placeholder="Choose"
         />
         <button
           type="button"
