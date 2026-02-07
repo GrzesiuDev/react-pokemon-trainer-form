@@ -11,7 +11,7 @@ A Next.js application for registering new Pokemon trainers with their starter Po
 - **Current Date Display** from external time API
 - **Custom IBM VGA Font** for retro styling
 - **Comprehensive Test Coverage** with Vitest
-- **Responsive Design** with Tailwind CSS v4
+- **Responsive Design** with Tailwind CSS v3
 
 ## 📋 Requirements
 
@@ -23,7 +23,7 @@ A Next.js application for registering new Pokemon trainers with their starter Po
 1. Clone the repository:
 ```bash
 git clone <repository-url>
-cd my-app
+cd pokemon-trainer-form
 ```
 
 2. Install dependencies:
@@ -64,9 +64,9 @@ docker-compose up app-dev
 docker-compose up app-prod
 ```
 
-**See [DOCKER.md](./DOCKER.md) for complete Docker documentation.**
+**For detailed Docker documentation, see [DOCKER.md](./DOCKER.md)**
 
-> **Note:** Docker uses Debian-based image (node:20-slim) for lightningcss compatibility. First build takes 5-10 minutes, subsequent builds are faster with caching. Uses `npm ci` for deterministic builds.
+> **Note:** Docker uses Debian-based image (node:20-slim) for maximum compatibility with Tailwind CSS v3 and all npm packages. First build takes 5-10 minutes, subsequent builds are faster with caching. Uses `npm ci` for deterministic builds.
 
 ## 🧪 Testing
 
@@ -97,7 +97,7 @@ See [TEST_DOCUMENTATION.md](./TEST_DOCUMENTATION.md) for detailed test documenta
 ## 🏗️ Project Structure
 
 ```
-my-app/
+pokemon-trainer-form/
 ├── src/
 │   ├── app/
 │   │   ├── api/
@@ -153,7 +153,7 @@ my-app/
 - **TypeScript 5** - Type safety
 
 ### Styling
-- **Tailwind CSS v4** - Utility-first CSS framework
+- **Tailwind CSS v3.4.17** - Utility-first CSS framework (stable version)
 - **Custom CSS Variables** - Theme customization
 
 ### Form Management
@@ -173,6 +173,7 @@ my-app/
 ### Development
 - **ESLint** - Code linting
 - **PostCSS** - CSS processing
+- **Autoprefixer** - CSS vendor prefixes
 
 ## 📝 API Endpoints
 
@@ -276,7 +277,7 @@ docker-compose up app-prod
 
 ### Technical Details:
 - **Base Image:** node:20-slim (Debian-based, optimized)
-- **Why Debian?** Tailwind CSS v4 uses lightningcss which requires glibc (not available in Alpine)
+- **Why Debian?** Maximum compatibility with Tailwind CSS v3 and all npm packages
 - **Build Time:** 5-10 minutes first time, ~1 minute with cache
 - **Development Port:** 3001
 - **Production Port:** 3000

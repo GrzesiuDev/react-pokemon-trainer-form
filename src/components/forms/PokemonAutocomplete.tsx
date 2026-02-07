@@ -108,7 +108,7 @@ export const PokemonAutocomplete: React.FC<PokemonAutocompleteProps> = ({
             displayItems.map((pokemon) => (
               <li
                 key={pokemon.id}
-                className="cursor-pointer px-3 py-2 text-sm hover:bg-(--color-primary-light) transition-colors"
+                className="cursor-pointer px-3 py-2 text-sm hover:bg-primary-light transition-colors"
                 onMouseDown={(e) => {
                   e.preventDefault()
                   setForceOpen(false)
@@ -122,7 +122,7 @@ export const PokemonAutocomplete: React.FC<PokemonAutocompleteProps> = ({
         </ul>
       )}
 
-      {showError && <span className="text-xs text-(--color-error)">{error}</span>}
+      {showError && <span className="text-xs text-error">{error}</span>}
     </div>
   )
 }

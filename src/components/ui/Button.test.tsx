@@ -12,7 +12,7 @@ describe('Button Component', () => {
   it('should render primary variant by default', () => {
     render(<Button>Primary</Button>)
     const button = screen.getByText('Primary')
-    expect(button).toHaveClass('bg-(--color-primary)')
+    expect(button).toHaveClass('bg-primary')
   })
 
   it('should render secondary variant', () => {

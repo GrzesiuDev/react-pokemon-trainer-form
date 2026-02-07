@@ -24,7 +24,7 @@ export const PokemonPreview: React.FC<PokemonPreviewProps> = ({ pokemon, isLoadi
   if (error) {
     return (
       <PreviewContainer className={className}>
-        <span className="text-(--color-error)">{error}</span>
+        <span className="text-error">{error}</span>
       </PreviewContainer>
     )
   }
@@ -54,7 +54,7 @@ export const PokemonPreview: React.FC<PokemonPreviewProps> = ({ pokemon, isLoadi
             <div className="flex gap-2 flex-wrap">
               Type:
               {pokemon.types.map((typeInfo) => (
-                <span key={typeInfo.type.name} className="px-3 py-1 text-xs rounded-full bg-(--color-primary-light)">
+                <span key={typeInfo.type.name} className="px-3 py-1 text-xs rounded-full bg-primary-light">
                   {capitalize(typeInfo.type.name)}
                 </span>
               ))}

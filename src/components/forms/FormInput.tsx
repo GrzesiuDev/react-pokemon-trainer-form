@@ -50,7 +50,7 @@ export const FormInput: React.FC<FormInputProps> = ({
           'transition-colors',
         )}
       />
-      {showError && <span className="text-xs text-(--color-error)">{error}</span>}
+      {showError && <span className="text-xs text-error">{error}</span>}
     </div>
   )
 }
